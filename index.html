@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/pagination.css" />
+	</head>
+	<body>
+		<br/><br/><br/><br/><br/>
+		<div id="box">
+			<div class="pagination" type="article"></div>
+		</div>
+		
+		<br/>
+		<div class="cbox1" ><div class="pagination" type="advice"></div></div>
+		
+		<br/>
+		<div class="cbox2" ><div class="pagination" type="pic"></div></div>
+		
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/pagination.js"></script>
+		<script>
+			function fun(type,page,keyword,do_what){
+				//修改函数——可以根据do_what选择不同操作，例如图片分页，文章分页等
+				console.log(type+' '+page+' '+keyword+'   '+do_what);
+			}
+			Pagination.p=7;//显示的页码数
+			//总页数在pagination.js里设置
+			Pagination.fun=fun;
+			Pagination.init('.cbox1','advice');  
+			Pagination.init('.cbox2','pic');
+			Pagination.init('#box','article');
+		</script>
+	</body>
+</html>
