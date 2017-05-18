@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/pagination.css" />
+	</head>
+	<body>
+		<br/><br/><br/><br/>
+		<div class="box">
+			<div class="pagination"></div>
+		</div>
+		<script src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/pagination.js"></script>
+		<script>
+			Pagination.p=7;
+			Pagination.count=20;
+			Pagination.pageTotal=199;
+			Pagination.fun=function(page,keyword,count){
+				console.log(page);
+			};
+			Pagination.init('.box');
+		</script>
+	</body>
+</html>
